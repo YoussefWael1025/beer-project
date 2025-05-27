@@ -1,6 +1,15 @@
-# Nuxt 3 Minimal Starter
+# Beer Shop
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+- This project was made during my working student employment at Coding9. I have developed everything from scratch while learning Vue/Nuxt on the go. I also got to learn about state management libraries such as Pinia and was able to use it throughout the project.
+
+## Tech stack
+
+- Nuxt3
+- Tailwindcss
+- Vue Router
+- Pinia
+- lodash
+- PrimeVue
 
 ## Setup
 
@@ -71,5 +80,3 @@ yarn preview
 # bun
 bun run preview
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
