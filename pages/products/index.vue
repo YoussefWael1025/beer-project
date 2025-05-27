@@ -110,7 +110,7 @@
 			:rows="1"
 			:totalRecords="3"
 			template="FirstPageLink PrevPageLink CurrentPageReport NextPageLink LastPageLink"
-			class="absolute w-full bottom-25"
+			class="fixed w-full bottom-[56px]"
 		/>
 	</div>
 </template>

@@ -23,19 +23,22 @@
 
 		<GridListSection />
 
-		<section>
+		<section class="flex flex-col">
 			<div
 				v-if="!beerStore.noSearch"
 				class="grid gap-4 p-4 mx-14"
 				:class="{
 					'grid-cols-1 xl:grid-cols-6': beerStore.isGrid,
-					'grid-cols-1': beerStore.isList,
+					'grid-cols-1 min-w-[30%] mb-32 self-center': beerStore.isList,
 				}"
 			>
 				<div
 					v-for="beer in beerStore.filteredBeerData"
 					class="p-12 bg-white shadow-lg rounded-lg product flex hover:cursor-pointer"
-					:class="{ 'flex-col': !beerStore.isList }"
+					:class="{
+						'flex-col': beerStore.isGrid,
+						'flex-col xl:flex-row gap-8': beerStore.isList,
+					}"
 					:id="beer.id"
 					@click="beerStore.getBeerById(beer.id)"
 				>
@@ -45,19 +48,24 @@
 						class="h-52 object-contain"
 						:class="{ 'w-fit': beerStore.isList, 'mr-2': beerStore.isList }"
 					/>
-					<h3
-						class="text-xl font-extrabold mt-2 overflow-hidden text-ellipsis whitespace-nowrap"
-						:class="{ 'text-center': !beerStore.isList }"
+					<div
+						class="flex flex-col justify-between"
+						:class="{ 'w-[24rem]': beerStore.isList }"
 					>
-						{{ beer.name }}
-					</h3>
-					<Button
-						class="mt-4 h-fit"
-						:id="beer.id"
-						@click="cartStore.addToCart(beer.id, beer.name, $event)"
-						label="Add To Cart"
-						rounded
-					/>
+						<h3
+							class="text-xl font-extrabold mt-2 overflow-hidden text-ellipsis whitespace-nowrap"
+							:class="{ 'text-center': !beerStore.isList }"
+						>
+							{{ beer.name }}
+						</h3>
+						<Button
+							class="mt-4 h-fit"
+							:id="beer.id"
+							@click="cartStore.addToCart(beer.id, beer.name, $event)"
+							label="Add To Cart"
+							rounded
+						/>
+					</div>
 				</div>
 			</div>
 		</section>
