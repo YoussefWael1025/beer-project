@@ -1,6 +1,6 @@
 # Beer Shop
 
-- This project was made during my working student employment at Coding9. I have developed everything from scratch while learning Vue/Nuxt on the go. I also got to learn about state management libraries such as Pinia and was able to use it throughout the project.
+- This project was made during my working student employment at [Coding9](https://coding9.de/). I have developed everything from scratch while learning Vue/Nuxt on the go. I also got to learn about state management libraries such as Pinia and was able to use it throughout the project.
 
 ## Tech stack
 
